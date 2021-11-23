@@ -1,0 +1,14 @@
+[package]
+name = "qtrack"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nalgebra = "0.29"
+ndarray = "0.15"
+num-traits = "0.2"
+serde = "1.0"
+serde_derive = "1.0"
+thiserror = "1.0"
+munkres = { version = "0.5", git = "https://github.com/andreytkachenko/munkres-rs" }
+onnx-model = { git = "https://github.com/andreytkachenko/onnx-model", branch = "v1.8" }
