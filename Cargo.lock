@@ -328,7 +328,7 @@ dependencies = [
 [[package]]
 name = "munkres"
 version = "0.5.2"
-source = "git+https://github.com/andreytkachenko/munkres-rs#f989a06df80f30c79d71540bec1e54cf5fcf9e69"
+source = "git+https://git.aidev.ru/andrey/munkres-rs.git#a1ee35d6fed82c4b9cc8e22b5edab8bdd886ddda"
 dependencies = [
  "fixedbitset",
  "ndarray 0.14.0",
@@ -448,7 +448,7 @@ dependencies = [
 [[package]]
 name = "onnx-model"
 version = "0.2.3"
-source = "git+https://github.com/andreytkachenko/onnx-model?branch=v1.8#b1317664cdf34a4404f14283ef5beac8f03c4280"
+source = "git+https://git.aidev.ru/andrey/onnx-model.git?branch=v1.10#f66912b39748542e6d2ded4a33e4c1247fe76769"
 dependencies = [
  "lazy_static",
  "ndarray 0.15.3",
@@ -461,7 +461,7 @@ dependencies = [
 [[package]]
 name = "onnxruntime"
 version = "0.1.0"
-source = "git+https://github.com/andreytkachenko/onnxruntime-rs.git?branch=v1.8#d4b8f290d51a6068edf915e357db1839a3a59d4a"
+source = "git+https://github.com/andreytkachenko/onnxruntime-rs.git?branch=v1.10#860d59f37c89c33bbe1d6d9600c160d2cf1bb5b7"
 dependencies = [
  "bindgen",
  "crossbeam",
