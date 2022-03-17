@@ -1,6 +1,4 @@
 pub mod bbox;
-pub mod detection;
-pub mod detector;
 pub mod error;
 pub mod frame;
 pub mod math;
@@ -12,8 +10,8 @@ mod circular_queue;
 mod predictor;
 mod track;
 
-pub use detection::Detection;
 pub use frame::Frame;
+pub use object_detector::Detection;
 pub use track::Track;
 
 use error::Error;

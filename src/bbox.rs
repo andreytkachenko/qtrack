@@ -1,3 +1,4 @@
+use crate::Detection;
 use serde::{Deserialize, Serialize};
 use serde_derive::{Deserialize, Serialize};
 use std::marker::PhantomData;
@@ -280,12 +281,8 @@ impl<'a> From<&'a BBox<Xywh>> for BBox<Xyah> {
     }
 }
 
-impl<'a> From<&'a BBox<Xyah>> for BBox<Xywh> {
-    #[inline]
-    fn from(v: &'a BBox<Xyah>) -> Self {
-        Self(
-            [v.0[0], v.0[1], v.0[2] * v.0[3], v.0[3]],
-            Default::default(),
-        )
+impl From<&'_ Detection> for BBox<Xywh> {
+    fn from(det: &'_ Detection) -> BBox<Xywh> {
+        BBox::xywh(det.x, det.y, det.w, det.h)
     }
 }

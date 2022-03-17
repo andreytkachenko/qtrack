@@ -10,5 +10,6 @@ num-traits = "0.2"
 serde = "1.0"
 serde_derive = "1.0"
 thiserror = "1.0"
+object-detector = { git = "https://git.aidev.ru/andrey/object-detector.git" }
 munkres = { version = "0.5", git = "https://git.aidev.ru/andrey/munkres-rs.git" }
 onnx-model = { git = "https://git.aidev.ru/andrey/onnx-model.git", branch = "v1.10" }

@@ -1,5 +1,6 @@
 use std::sync::atomic::AtomicU32;
 
+use crate::bbox::{BBox, Xywh};
 use crate::tracker::Object;
 use crate::Detection;
 
@@ -391,6 +392,8 @@ impl Participant {
 
 impl From<&Participant> for crate::Track {
     fn from(p: &Participant) -> crate::Track {
+        let bbox: BBox<Xywh> = p.last_detection().into();
+
         crate::Track {
             track_id: p.id as _,
             time_since_update: p.time_since_update as _,
@@ -403,7 +406,7 @@ impl From<&Participant> for crate::Track {
                 .unwrap_or(0) as _,
             confidence: p.hit_score_sum / p.hits_count as f32,
             iou_slip: p.iou_slip(),
-            bbox: p.last_detection().bbox().as_xyah(),
+            bbox: bbox.as_xyah(),
             velocity: Some(*p.velocity()),
             direction: Some((p.direction().re, p.direction().im)),
             curvature: Some(p.object.predictor.curvature),

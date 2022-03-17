@@ -1,4 +1,4 @@
-use crate::detection::Detection;
+use crate::Detection;
 
 pub struct Frame {
     pub dims: (u32, u32),
