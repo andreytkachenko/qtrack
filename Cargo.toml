@@ -13,3 +13,4 @@ thiserror = "1.0"
 object-detector = { git = "https://git.aidev.ru/andrey/object-detector.git" }
 munkres = { version = "0.5", git = "https://git.aidev.ru/andrey/munkres-rs.git" }
 onnx-model = { git = "https://git.aidev.ru/andrey/onnx-model.git", branch = "v1.10" }
+opencv = "0.63.0"
